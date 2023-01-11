@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(45deg, red, blue);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    background-repeat: no-repeat;
+
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 90px;
+}
+
+div {
+    background-image: linear-gradient(purple, aqua);
+    width: 200px;
+    padding: 10px;
+    transition: all 0.1s;
+    flex-grow: 1;
+}
+
+div :hover {
+    transform: scale(1.2);
+}
+
+div :hover a {
+    display: block;
+}
+
+div a:hover {
+    font-size: 18px;
+    border-bottom: 3px solid purple;
+}
+
+div h1 {
+    font-size: 20px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+div a {
+    transition-property: all;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    font-size: 18px;
+   
+    border-bottom: 3px solid transparent;
+
+}
+
+footer {
+    align-items: center;
+    display: flex;
+    /*border-top: 5px solid rgba(44, 0, 44, 0.089);*/
+    justify-content: space-between;
+    position: sticky;
+    bottom: 0px;
+}
+
+footer ul {
+    display: flex;
+    gap: 200px;
+    list-style-type: none;
+    display: none;
+}
+
+footer ul li a {
+    color: black;
+    text-decoration: none;
+
+}
+
+footer h3 {
+    font-size: 20px;
+    text-shadow: 2px 2px 5px black;
+
+}
+
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 480px) {
+    section {
+        padding: 50px 30px;
+        gap: 0px;
+    }
+
+    div {
+        transform: scale(0.8);
+    }
+
+
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    section {
+        padding: 40px 30px;
+        gap: 0px;
+    }
+
+    div {
+        transform: scale(0.9);
+    }
+
+    div :hover {
+        transform: scale(1.01);
+    }
+}
+
+@media screen and (min-width: 769px) {}
